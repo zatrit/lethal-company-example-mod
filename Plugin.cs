@@ -8,7 +8,7 @@ using static MyLethalCompanyMod.MyPluginInfo;
 namespace MyLethalCompanyMod;
 
 [BepInPlugin(PLUGIN_GUID, PLUGIN_NAME, PLUGIN_VERSION)]
-public class MyPlugin : BaseUnityPlugin
+public class Plugin : BaseUnityPlugin
 {
     public static new ManualLogSource Logger;
 

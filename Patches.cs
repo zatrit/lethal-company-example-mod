@@ -1,5 +1,7 @@
 using HarmonyLib;
 
+using static MyLethalCompanyMod.Plugin;
+
 namespace MyLethalCompanyMod.Patches;
 
 // Injection into Awake method from MenuManager class
@@ -8,6 +10,6 @@ public class SayHello
 {
     static void Prefix()
     {
-        Plugin.Logger.LogInfo("Hello from menu!");
+        Logger.LogInfo("Hello from menu!");
     }
 }
