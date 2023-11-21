@@ -1,7 +1,4 @@
-using BepInEx.Logging;
 using HarmonyLib;
-
-using static MyLethalCompanyMod.MyPluginInfo;
 
 namespace MyLethalCompanyMod.Patches;
 
@@ -9,10 +6,8 @@ namespace MyLethalCompanyMod.Patches;
 [HarmonyPatch(typeof(MenuManager), "Awake")]
 public class SayHello
 {
-    static readonly ManualLogSource logger = Logger.CreateLogSource(PLUGIN_GUID);
-
     static void Prefix()
     {
-        logger.LogInfo("Hello from menu!");
+        Plugin.Logger.LogInfo("Hello from menu!");
     }
 }
